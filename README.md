@@ -5,6 +5,7 @@ Um evento gratuito da comunidade e para a comunidade, focado em **ciência de da
 
 ---
 
+
 ## 🧠 Sobre o PyData
 
 O **PyData** é uma iniciativa apoiada pela [NumFOCUS](https://numfocus.org/), uma organização sem fins lucrativos dos EUA que promove comunidades inclusivas na área de tecnologia.
