@@ -85,11 +85,11 @@ export default function PyDataParaPage() {
           // },
         ],
         silver: [
-          // {
-          //   name: "Silver Sponsor 1",
-          //   logo: "/placeholder.svg?height=60&width=150&text=Silver+1",
-          //   website: "https://empresa-prata-1.com",
-          // },
+          {
+            name: "Silver Sponsor 1",
+            logo: "/placeholder.svg?height=60&width=150&text=Silver+1",
+            website: "https://empresa-prata-1.com",
+          },
         ],
         bronze: [
           // {
