@@ -28,6 +28,10 @@ import {
 export default function PyDataParaPage() {
   const [selectedEvent, setSelectedEvent] = useState("2025");
 
+  const openLink = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   const events = {
     "2025": {
       title: "I Meetup PyData Pará",
@@ -336,12 +340,6 @@ const schedule = [
                   </DropdownMenuContent>
                 </DropdownMenu>
               </nav>
-
-              <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white">
-                {currentEvent.status === "upcoming"
-                  ? "Inscreva-se"
-                  : "Ver Fotos"}
-              </Button>
             </div>
           </div>
         </div>
@@ -368,6 +366,9 @@ const schedule = [
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Da comunidade e para a comunidade
           </p>
+          <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white mb-8" onClick={() => openLink('https://www.meetup.com/pydata-para/events/310374256')}>
+            Inscreva-se
+          </Button>
           <div className="flex flex-wrap justify-center gap-6 text-lg">
             <div className="flex items-center gap-2">
               <Calendar className="h-5 w-5" />
