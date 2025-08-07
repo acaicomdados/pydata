@@ -1,5 +1,75 @@
 # 📝 Guia de Atualização do Site PyData Pará
 
+## 🍴 Primeiro Passo: Fork do Repositório
+
+### 1. Fazer Fork
+1. Acesse: https://github.com/acaicomdados/pydata
+2. Clique em **Fork** (canto superior direito)
+3. Selecione sua conta/organização
+4. Aguarde a criação do fork
+
+### 2. Clonar Localmente
+```bash
+git clone https://github.com/acaicomdados/pydata
+cd pydata
+npm ci --force
+```
+
+### 3. Configurar GitHub Pages
+1. Vá em **Settings** → **Pages**
+2. Source: **GitHub Actions**
+3. Aguarde primeiro deploy
+
+---
+
+## 🔄 Git Flow para Contribuições
+
+### 1. Configurar Upstream (Uma vez)
+```bash
+# Adicionar repositório original como upstream
+git remote add upstream https://github.com/acaicomdados/pydata.git
+git remote -v  # verificar remotes
+```
+
+### 2. Workflow de Atualização
+```bash
+# 1. Criar branch para mudanças
+git checkout -b feature/atualizar-keynotes
+
+# 2. Fazer alterações nos arquivos
+# (editar app/page.tsx, adicionar logos, etc.)
+
+# 3. Commit das mudanças
+git add .
+git commit -m "feat: atualizar keynotes e patrocinadores"
+
+# 4. Push da branch
+git push origin feature/atualizar-keynotes
+```
+
+### 3. Criar Pull Request
+1. Vá para seu fork no GitHub
+2. Clique em **Compare & pull request**
+3. Base: `acaicomdados/pydata` → `main`
+4. Compare: `seu-usuario/pydata` → `feature/atualizar-keynotes`
+5. Adicione título e descrição
+6. Clique em **Create pull request**
+
+### 4. Sincronizar com Upstream
+```bash
+# Buscar mudanças do repositório original
+git fetch upstream
+
+# Voltar para main e atualizar
+git checkout main
+git merge upstream/main
+
+# Atualizar seu fork
+git push origin main
+```
+
+---
+
 ## 🎯 Como Atualizar o Site
 
 ### 1. Estrutura de Arquivos
@@ -8,9 +78,19 @@
 - **Cronograma**: Array `schedule` na linha ~120
 
 ### 2. Deploy Automático
-- Faça push para branch `main`
-- GitHub Actions fará deploy automático
-- Site disponível em: `https://username.github.io/pydata`
+
+**Para testes no seu fork:**
+```bash
+# Deploy direto (apenas para testes)
+git add .
+git commit -m "test: atualizar conteúdo"
+git push origin main
+```
+
+**Para contribuições oficiais:**
+- Use o Git Flow acima (branches + PR)
+- Deploy oficial após merge no repositório principal
+- Site oficial: `https://acaicomdados.github.io/pydata`
 
 ---
 
@@ -60,6 +140,12 @@ sponsors: {
   community: [...]
 }
 ```
+
+### Cotas Disponíveis:
+- **Ouro** (R$ 400): Logo grande + benefícios premium
+- **Prata** (R$ 250): Logo médio + lightning talks
+- **Bronze** (R$ 150): Logo pequeno + menção
+- **Comunidade** (Gratuito): Menção nas redes
 
 ### Passos:
 1. Adicione logo em `public/logos/`
