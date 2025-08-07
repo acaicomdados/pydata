@@ -14,12 +14,6 @@ git clone https://github.com/acaicomdados/pydata
 cd pydata
 npm ci --force
 ```
-
-### 3. Configurar GitHub Pages
-1. Vá em **Settings** → **Pages**
-2. Source: **GitHub Actions**
-3. Aguarde primeiro deploy
-
 ---
 
 ## 🔄 Git Flow para Contribuições
