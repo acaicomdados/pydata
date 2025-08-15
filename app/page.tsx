@@ -82,11 +82,11 @@ export default function PyDataParaPage() {
       ],
       sponsors: {
         gold: [
-          // {
-          //   name: "Gold Sponsor",
-          //   logo: "/placeholder.svg?height=80&width=200&text=Gold+Sponsor+1",
-          //   website: "https://empresa-gold-1.com",
-          // },
+          {
+            name: "Gold Sponsor",
+            logo: "/placeholder.svg?height=80&width=200&text=Gold+Sponsor+1",
+            website: "https://empresa-gold-1.com",
+          },
         ],
         silver: [
           {
@@ -96,11 +96,11 @@ export default function PyDataParaPage() {
           },
         ],
         bronze: [
-          // {
-          //   name: "Empresa Bronze 1",
-          //   logo: "/placeholder.svg?height=50&width=120&text=Bronze+1",
-          //   website: "https://empresa-bronze-1.com",
-          // }
+          {
+            name: "Empresa Bronze 1",
+            logo: "/placeholder.svg?height=50&width=120&text=Bronze+1",
+            website: "https://empresa-bronze-1.com",
+          }
         ],
         community: [
           // {
@@ -108,6 +108,11 @@ export default function PyDataParaPage() {
           //   logo: "/placeholder.svg?height=40&width=100&text=Python+PA",
           //   website: "https://www.linkedin.com/company/108233214/admin/dashboard/",
           // },
+          {
+            name: "Elas Na Tecnologia",
+            logo: "/logos/elas-na-tecnologia.png?height=60&width=150&text=Elas+Na+Tecnologia",
+            website: "https://www.linkedin.com/company/elasnatecnologia/",
+          },
         ],
       },
       photos: [
@@ -766,7 +771,7 @@ const schedule = [
           </h3>
 
           <center>
-            <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white">
+            <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white mb-10">
               Confira nosso plano de Patrocínio
             </Button>
           </center>
@@ -791,9 +796,9 @@ const schedule = [
                         <img
                           src={sponsor.logo || "/placeholder.svg"}
                           alt={sponsor.name}
-                          className="h-20 w-auto mx-auto"
+                          className="h-32 w-auto mx-auto"
                         />
-                        <ExternalLink className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-orange" />
+                         <ExternalLink className="hidden h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-orange" />
                       </div>
                     </Card>
                   </a>
@@ -822,9 +827,9 @@ const schedule = [
                         <img
                           src={sponsor.logo || "/placeholder.svg"}
                           alt={sponsor.name}
-                          className="h-16 w-auto mx-auto"
+                          className="h-28 w-auto mx-auto"
                         />
-                        <ExternalLink className="h-3 w-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-gray-dark" />
+                         <ExternalLink className="hidden h-3 w-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-gray-dark" />
                       </div>
                     </Card>
                   </a>
@@ -853,9 +858,9 @@ const schedule = [
                         <img
                           src={sponsor.logo || "/placeholder.svg"}
                           alt={sponsor.name}
-                          className="h-16 w-auto mx-auto"
+                          className="h-24 w-auto mx-auto"
                         />
-                        <ExternalLink className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-gray-dark" />
+                         <ExternalLink className="hidden h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-gray-dark" />
                       </div>
                     </Card>
                   </a>
@@ -884,9 +889,9 @@ const schedule = [
                         <img
                           src={sponsor.logo || "/placeholder.svg"}
                           alt={sponsor.name}
-                          className="h-10 w-auto mx-auto"
+                          className="h-16 w-auto mx-auto"
                         />
-                        <ExternalLink className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-teal" />
+                         <ExternalLink className="hidden h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-teal" />
                       </div>
                     </Card>
                   </a>
@@ -931,7 +936,7 @@ const schedule = [
                 </div>
                 <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-8 h-8 bg-pydata-orange rounded-full flex items-center justify-center">
-                    <ExternalLink className="h-4 w-4 text-white" />
+                     <ExternalLink className="hidden h-4 w-4 text-white" />
                   </div>
                 </div>
               </div>
@@ -1126,6 +1131,45 @@ const schedule = [
                 </div>
               </CardContent>
             </Card>
+
+            {/* Porãygua */}
+            <Card className="overflow-hidden border-2 border-pydata-teal hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-pydata-teal to-pydata-teal-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                  <img
+                    src="/placeholder.svg?height=80&width=80&text=Porãygua"
+                    alt="Porãygua"
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
+                </div>
+                <h4 className="text-2xl font-bold text-pydata-dark mb-4">
+                  Porãygua
+                </h4>
+                <p className="text-pydata-gray-dark mb-6 leading-relaxed">
+                  Comunidade de estudantes de computação do norte do Brasil 🌎
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <a
+                    href="https://www.linkedin.com/company/106975641"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-pydata-teal text-white hover:bg-pydata-teal-dark transition-colors"
+                    title="LinkedIn Porãygua"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/poraygua/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-pydata-orange text-white hover:bg-pydata-orange-dark transition-colors"
+                    title="Instagram Porãygua"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Union Message */}
@@ -1144,8 +1188,8 @@ const schedule = [
                 União de Forças
               </h4>
               <p className="text-pydata-gray-dark leading-relaxed">
-                O PyData Pará nasce da colaboração entre duas das principais
-                comunidades tech do estado, unindo expertise em dados e
+                O PyData Pará nasce da colaboração entre três das principais
+                comunidades tech do estado do Pará, unindo expertise em dados e
                 desenvolvimento Python para criar um evento único e inclusivo
                 que representa a diversidade e inovação da Amazônia.
               </p>
