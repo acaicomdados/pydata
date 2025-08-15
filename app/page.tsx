@@ -28,6 +28,8 @@ import {
 export default function PyDataParaPage() {
   const [selectedEvent, setSelectedEvent] = useState("2025");
 
+  const siteURL = "https://raw.githubusercontent.com/acaicomdados/pydata/refs/heads/main/public/";
+
   const openLink = (url: string) => {
     window.open(url, "_blank");
   };
@@ -110,7 +112,7 @@ export default function PyDataParaPage() {
           // },
           {
             name: "Elas Na Tecnologia",
-            logo: "https://raw.githubusercontent.com/acaicomdados/pydata/refs/heads/main/public/logos/elas-na-tecnologia.png?height=60&width=150&text=Elas+Na+Tecnologia",
+            logo: siteURL + "logos/elas-na-tecnologia.png?height=60&width=150&text=Elas+Na+Tecnologia",
             website: "https://www.linkedin.com/company/elasnatecnologia/",
           },
         ],
