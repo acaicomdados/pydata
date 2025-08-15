@@ -60,6 +60,7 @@ const config: Config = {
         "pydata-orange-lightest": "#FAD4B1",
         "pydata-orange-dark": "#D67E2A",
         "pydata-teal": "#449CBB",
+        "pydata-poraygua": "#0e5561",
         "pydata-teal-light": "#9CBCBC",
         "pydata-teal-dark": "#2E7A94",
         "pydata-gray": "#8F9CA2",
