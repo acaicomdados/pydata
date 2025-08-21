@@ -86,28 +86,33 @@ export default function PyDataParaPage() {
         gold: [
           {
             name: "Gold Sponsor",
-            logo: "/placeholder.svg?height=80&width=200&text=Gold+Sponsor+1",
+            logo: siteURL + "/placeholder.svg?height=80&width=200&text=Gold+Sponsor+1",
             website: "https://empresa-gold-1.com",
           },
         ],
         silver: [
+          // {
+          //   name: "Silver Sponsor 1",
+          //   logo: siteURL + "/placeholder.svg?height=60&width=150&text=Silver+1",
+          //   website: "https://empresa-prata-1.com",
+          // },
           {
-            name: "Silver Sponsor 1",
-            logo: "/placeholder.svg?height=60&width=150&text=Silver+1",
-            website: "https://empresa-prata-1.com",
+            name: "EasyGestor",
+            logo: siteURL + "logos/easygestor.png?height=60&width=150&text=EasyGestor",
+            website: "https://www.instagram.com/easygestor",
           },
         ],
         bronze: [
           {
             name: "Empresa Bronze 1",
-            logo: "/placeholder.svg?height=50&width=120&text=Bronze+1",
+            logo: siteURL + "/placeholder.svg?height=50&width=120&text=Bronze+1",
             website: "https://empresa-bronze-1.com",
           }
         ],
         community: [
           // {
           //   name: "GruPy Pará",
-          //   logo: "/placeholder.svg?height=40&width=100&text=Python+PA",
+          //   logo: siteURL + "/placeholder.svg?height=40&width=100&text=Python+PA",
           //   website: "https://www.linkedin.com/company/108233214/admin/dashboard/",
           // },
           {
