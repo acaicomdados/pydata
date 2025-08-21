@@ -39,8 +39,8 @@ export default function PyDataParaPage() {
       title: "I Meetup PyData Pará",
       subtitle: "Primeira edição no Pará",
       date: "Sábado, 06/09/2025",
-      time: "13h às 18h",
-      location: "Local a definir",
+      time: "9h às 13h",
+      location: "CESUPA - Campus José Malcher",
       attendees: "",
       status: "upcoming",
       keynotes: [
@@ -115,6 +115,46 @@ export default function PyDataParaPage() {
             logo: siteURL + "logos/elas-na-tecnologia.png?height=60&width=150&text=Elas+Na+Tecnologia",
             website: "https://www.linkedin.com/company/elasnatecnologia/",
           },
+          {
+            name: "Manas Digitais",
+            logo: siteURL + "logos/manas-digitais.png?height=60&width=150&text=Manas+Digitais",
+            website: "https://www.instagram.com/manasdigitais/",
+          },
+          {
+            name: "PyLadies Manaus",
+            logo: siteURL + "logos/pyladies-manaus.png?height=60&width=150&text=PyLadies+Manaus",
+            website: "https://www.instagram.com/pyladiesmanaus/",
+          },
+          {
+            name: "Meninas das Geotecnologias",
+            logo: siteURL + "logos/meninas-das-geotecnologias.png?height=60&width=150&text=Meninas+das+Geotecnologias",
+            website: "https://www.instagram.com/meninasdageo/",
+          },
+          {
+            name: "Comunidade BelJogos",
+            logo: siteURL + "logos/beljogos.png?height=60&width=150&text=Comunidade+BelJogos",
+            website: "https://www.instagram.com/beljogos/",
+          },
+          {
+            name: "PyLadies Belém",
+            logo: siteURL + "logos/pyladies-belem.png?height=60&width=150&text=PyLadies+Belem",
+            website: "https://www.instagram.com/pyladiesbelem/",
+          },
+          {
+            name: "Cap Belem",
+            logo: siteURL + "logos/cap-belem.png?height=60&width=150&text=Cap+Belem",
+            website: "https://www.instagram.com/owasp_belem",
+          },
+          {
+            name: "Tá Safo",
+            logo: siteURL + "logos/ta-safo.jpeg?height=60&width=150&text=Tá+Safo",
+            website: "https://www.linkedin.com/company/tasafo",
+          },
+          {
+            name: "LovelaceTech",
+            logo: siteURL + "logos/lovelacetech.jpeg?height=60&width=150&text=LovelaceTech",
+            website: "https://www.linkedin.com/company/lovelacetech/",
+          }
         ],
       },
       photos: [
