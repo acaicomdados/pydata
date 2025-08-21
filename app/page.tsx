@@ -567,8 +567,8 @@ const schedule = [
             Palestrantes
           </h3>
           <center>
-            <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white">
-              Em Breve ...
+            <Button onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfoInODCCM_OcbIoOdi-_CJ_V_pjtrr03ElcQ8-MO9T-_qd8g/viewform")}  className="bg-pydata-orange hover:bg-pydata-orange-dark text-white">
+              Clique aqui
             </Button>
           </center>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
