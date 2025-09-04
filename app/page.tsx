@@ -50,7 +50,7 @@ export default function PyDataParaPage() {
           // company: "Company",
           talk: "Vibe Coding e AI Pair programming",
           time: "09:05 – 09:45",
-          photo: siteURL  + "public/claudio-bonel.jpeg?height=200&width=300&text=Prof.+Claudio+Bonel",
+          photo: siteURL  + "claudio-bonel.jpeg?height=200&width=300&text=Prof.+Claudio+Bonel",
           // description: "description",
           linkedin: "https://linkedin.com/in/bonel",
           instagram: "https://instagram.com/",
@@ -62,7 +62,7 @@ export default function PyDataParaPage() {
           // company: "Company",
           talk: "Arquitetura base para o sucesso de um projeto de dados",
           time: "12:00 – 12:40",
-          photo: siteURL + "public/artemisia-weyl.jpeg?height=200&width=300&text=Closing+Keynote+Speaker",
+          photo: siteURL + "artemisia-weyl.jpeg?height=200&width=300&text=Closing+Keynote+Speaker",
           // description: "description",
           linkedin: "https://linkedin.com/in/arteweyl",
           instagram: "https://instagram.com/",
@@ -105,7 +105,7 @@ export default function PyDataParaPage() {
         bronze: [
           {
             name: "Empresa Bronze 1",
-            logo: siteURL + "/placeholder.svg?height=50&width=120&text=Bronze+1",
+            logo: siteURL + "placeholder.svg?height=50&width=120&text=Bronze+1",
             website: "https://empresa-bronze-1.com",
           }
         ],
