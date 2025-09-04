@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Calendar,
   Clock,
@@ -24,10 +24,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Autoplay from 'embla-carousel-autoplay';
+import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 
 export default function PyDataParaPage() {
   const [selectedEvent, setSelectedEvent] = useState("2025");
-
+  const [emblaRef, embla] = useEmblaCarousel(
+  { loop: true, align: 'center' } as EmblaOptionsType,
+  [new Autoplay({ delay: 1900, stopOnInteraction: false }) as any]
+);
   const siteURL = "https://raw.githubusercontent.com/acaicomdados/pydata/refs/heads/main/public/";
 
   const openLink = (url: string) => {
@@ -109,6 +114,13 @@ export default function PyDataParaPage() {
             logo: siteURL + "placeholder.svg?height=50&width=120&text=Bronze+1",
             website: "https://empresa-bronze-1.com",
           }
+        ],
+        discounts: [
+          {
+            name: "Papaxibé Restô",
+            logo: siteURL + "logos/papaxibe-2.png?height=40&width=100&text=Papaxibé+Restô",
+            website: "https://www.instagram.com/papaxibe_resto",
+          },
         ],
         community: [
           // {
@@ -423,10 +435,11 @@ const schedule = [
               <MapPin className="h-5 w-5" />
               <span>{currentEvent.location}</span>
             </div>
-            <div className="flex items-center gap-2">
+            
+            {/* <div className="flex items-center gap-2">
               <Users className="h-5 w-5" />
               <span>{currentEvent.attendees}</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -863,7 +876,7 @@ const schedule = [
                         <img
                           src={sponsor.logo || "/placeholder.svg"}
                           alt={sponsor.name}
-                          className="h-28 w-auto mx-auto"
+                          className="h-24 w-auto mx-auto"
                         />
                          <ExternalLink className="hidden h-3 w-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-gray-dark" />
                       </div>
@@ -907,12 +920,47 @@ const schedule = [
 
           {/* Community Sponsors */}
           {currentEvent.sponsors.community.length > 0 && (
+          <div>
+            <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6">
+              Apoio da Comunidade 🫂
+            </h4>
+
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {currentEvent.sponsors.community.map((sponsor, index) => (
+                  <div className="flex-[0_0_150px] p-2 shrink-0" key={index}>
+                    <a
+                      href={sponsor.website || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block"
+                    >
+                      <Card className="p-3 hover:shadow-lg transition-all duration-300 border border-pydata-teal group-hover:border-pydata-teal-dark group-hover:scale-105">
+                        <div className="flex items-center justify-center">
+                          <img
+                            src={sponsor.logo || "/placeholder.svg"}
+                            alt={sponsor.name}
+                            className="h-16 w-auto mx-auto"
+                          />
+                          <ExternalLink className="hidden h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-teal" />
+                        </div>
+                      </Card>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          )}
+        </div>
+
+        {currentEvent.sponsors.discounts.length > 0 && (
             <div>
-              <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6">
-                Apoio da Comunidade
+              <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6 mt-12">
+                Apoio na bóia e gelada 🍻
               </h4>
               <div className="flex justify-center gap-6 flex-wrap">
-                {currentEvent.sponsors.community.map((sponsor, index) => (
+                {currentEvent.sponsors.discounts.map((sponsor, index) => (
                   <a
                     key={index}
                     href={sponsor.website || "#"}
@@ -935,7 +983,6 @@ const schedule = [
               </div>
             </div>
           )}
-        </div>
       </section>
 
       {/* Gallery Section */}
@@ -1236,6 +1283,25 @@ const schedule = [
         </div>
       </section>
 
+      <section id="location" className="py-16">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-center text-pydata-dark mb-12">
+            Localização do Evento
+          </h3>
+          <div className="w-full h-full">
+            <iframe
+              className="w-full h-50"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.2719417982885!2d-48.47605979384842!3d-1.4482107727404612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48c23f8080c2d%3A0xba1e33a20f6781fd!2sCesupa%20-%20Campus%20Jos%C3%A9%20Malcher!5e0!3m2!1spt-BR!2sbr!4v1756960884738!5m2!1spt-BR!2sbr" 
+            // width="600" 
+            // height="450"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-pydata-dark text-white py-12">
         <div className="container mx-auto px-4">
@@ -1247,7 +1313,7 @@ const schedule = [
               <span className="text-xl font-bold">PyData Pará</span>
             </div>
             <p className="text-pydata-gray mb-4">
-              Uma iniciativa da comunidade Python e Data Science do Pará
+              Uma iniciativa das comunidades de Python e Tecnologia do Pará
             </p>
             <p className="text-sm text-pydata-gray">
               Apoiado pela NumFocus • Evento gratuito e aberto à comunidade
