@@ -566,7 +566,7 @@ const schedule = [
       </section>
 
       {/* Speakers Section */}
-      <section id="palestrantes" className="py-16">
+      {/* <section id="palestrantes" className="py-16">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-center text-pydata-dark mb-12">
             Palestrantes
@@ -638,7 +638,7 @@ const schedule = [
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Schedule Section */}
       <section id="cronograma" className="py-16 bg-pydata-light">
@@ -805,14 +805,14 @@ const schedule = [
             Apoiadores
           </h3>
 
-          <center>
+          {/* <center>
             <Button className="bg-pydata-orange hover:bg-pydata-orange-dark text-white mb-10">
               Confira nosso plano de Patrocínio
             </Button>
-          </center>
+          </center> */}
 
           {/* Gold Sponsors */}
-          {currentEvent.sponsors.gold.length > 0 && (
+          {/* {currentEvent.sponsors.gold.length > 0 && (
             <div className="mb-12">
               <h4 className="text-2xl font-semibold text-center text-pydata-orange mb-8">
                 Patrocínio Ouro
@@ -840,14 +840,14 @@ const schedule = [
                 ))}
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Silver Sponsors */}
           {currentEvent.sponsors.silver.length > 0 && (
             <div className="mb-12">
-              <h4 className="text-xl font-semibold text-center text-pydata-gray-dark mb-6">
+              {/* <h4 className="text-xl font-semibold text-center text-pydata-gray-dark mb-6">
                 Patrocínio Prata
-              </h4>
+              </h4> */}
               <div className="flex justify-center gap-6 flex-wrap">
                 {currentEvent.sponsors.silver.map((sponsor, index) => (
                   <a
@@ -874,7 +874,7 @@ const schedule = [
           )}
 
           {/* Bronze Sponsors */}
-          {currentEvent.sponsors.bronze.length > 0 && (
+          {/* {currentEvent.sponsors.bronze.length > 0 && (
             <div className="mb-12">
               <h4 className="text-lg font-semibold text-center text-pydata-gray-dark mb-6">
                 Patrocínio Bronze
@@ -902,7 +902,7 @@ const schedule = [
                 ))}
               </div>
             </div>
-          )}
+          )} */}
 
           {/* Community Sponsors */}
           {currentEvent.sponsors.community.length > 0 && (
@@ -938,7 +938,7 @@ const schedule = [
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 bg-gradient-to-br from-pydata-light to-white">
+      {/* <section className="py-16 bg-gradient-to-br from-pydata-light to-white">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-center text-pydata-dark mb-4">
             Galeria de Fotos
@@ -987,7 +987,7 @@ const schedule = [
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Topics Section */}
       <section className="py-16 bg-pydata-light">
@@ -1093,7 +1093,7 @@ const schedule = [
               <CardContent className="p-8 text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-pydata-teal to-pydata-teal-dark rounded-full flex items-center justify-center mx-auto mb-6">
                   <img
-                    src="/placeholder.svg?height=80&width=80&text=Açaí+Dados"
+                    src={siteURL + "acai-com-dados.jpeg?height=80&width=80&text=Açaí+com+Dados"}
                     alt="Açaí com Dados"
                     className="w-16 h-16 rounded-full object-cover"
                   />
@@ -1132,7 +1132,7 @@ const schedule = [
               <CardContent className="p-8 text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-pydata-orange to-pydata-orange-dark rounded-full flex items-center justify-center mx-auto mb-6">
                   <img
-                    src="/placeholder.svg?height=80&width=80&text=GruPy+PA"
+                    src={siteURL + "grupy-pa.png?height=80&width=80&text=GruPy+PA"}
                     alt="GruPy PA"
                     className="w-16 h-16 rounded-full object-cover"
                   />
@@ -1172,7 +1172,7 @@ const schedule = [
               <CardContent className="p-8 text-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-pydata-teal to-pydata-teal-dark rounded-full flex items-center justify-center mx-auto mb-6">
                   <img
-                    src="/placeholder.svg?height=80&width=80&text=Porãygua"
+                    src={siteURL + "poraygua.jpeg?height=80&width=80&text=Porãygua"}
                     alt="Porãygua"
                     className="w-16 h-16 rounded-full object-cover"
                   />
