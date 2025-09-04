@@ -224,12 +224,12 @@ const schedule = [
   },
   {
     time: "11:15 – 11:20",
-    title: "⚡ Palestras Relâmpago 1",
+    title: "⚡ Palestra Relâmpago 1",
     type: "lightning",
   },
   {
     time: "11:20 – 11:35",
-    title: "⚡ Palestras Relâmpago 2 - SolusIT",
+    title: "⚡ Palestra Relâmpago 2 - SolusIT",
     type: "lightning",
   },
   {
