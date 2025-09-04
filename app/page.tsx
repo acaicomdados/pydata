@@ -224,12 +224,12 @@ const schedule = [
   },
   {
     time: "11:15 – 11:20",
-    title: "⚡ Palestras Relâmpago 1",
+    title: "⚡ Palestra Relâmpago 1",
     type: "lightning",
   },
   {
     time: "11:20 – 11:35",
-    title: "⚡ Palestras Relâmpago 2 - SolusIT",
+    title: "⚡ Palestra Relâmpago 2 - SolusIT",
     type: "lightning",
   },
   {
@@ -918,11 +918,42 @@ const schedule = [
             </div>
           )} */}
 
+          {/* Discounts Sponsors */}
+          {currentEvent.sponsors.discounts.length > 0 && (
+            <div>
+              <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6 mt-12">
+                Apoio na bóia e gelada 🍻
+              </h4>
+              <div className="flex justify-center gap-6 flex-wrap">
+                {currentEvent.sponsors.discounts.map((sponsor, index) => (
+                  <a
+                    key={index}
+                    href={sponsor.website || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <Card className="p-3 hover:shadow-lg transition-all duration-300 border border-pydata-teal group-hover:border-pydata-teal-dark group-hover:scale-105">
+                      <div className="flex items-center justify-center">
+                        <img
+                          src={sponsor.logo || "/placeholder.svg"}
+                          alt={sponsor.name}
+                          className="h-16 w-auto mx-auto"
+                        />
+                         <ExternalLink className="hidden h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-teal" />
+                      </div>
+                    </Card>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Community Sponsors */}
           {currentEvent.sponsors.community.length > 0 && (
           <div>
-            <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6">
-              Apoio da Comunidade 🫂
+            <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6 mt-12">
+              Apoio das Comunidades
             </h4>
 
             <div className="overflow-hidden" ref={emblaRef}>
@@ -954,35 +985,7 @@ const schedule = [
           )}
         </div>
 
-        {currentEvent.sponsors.discounts.length > 0 && (
-            <div>
-              <h4 className="text-lg font-semibold text-center text-pydata-teal mb-6 mt-12">
-                Apoio na bóia e gelada 🍻
-              </h4>
-              <div className="flex justify-center gap-6 flex-wrap">
-                {currentEvent.sponsors.discounts.map((sponsor, index) => (
-                  <a
-                    key={index}
-                    href={sponsor.website || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <Card className="p-3 hover:shadow-lg transition-all duration-300 border border-pydata-teal group-hover:border-pydata-teal-dark group-hover:scale-105">
-                      <div className="flex items-center justify-center">
-                        <img
-                          src={sponsor.logo || "/placeholder.svg"}
-                          alt={sponsor.name}
-                          className="h-16 w-auto mx-auto"
-                        />
-                         <ExternalLink className="hidden h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity text-pydata-teal" />
-                      </div>
-                    </Card>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
+        
       </section>
 
       {/* Gallery Section */}
