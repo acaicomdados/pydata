@@ -140,6 +140,13 @@ export default {
         website: "https://empresa-bronze-4.com",
       },
     ],
+    discounts: [
+      {
+        name: "Desconto Estudantil",
+        logo: "/placeholder.svg?height=40&width=100&text=Desconto+Estudantil",
+        website: "https://www.alura.com.br",
+      },
+    ],
     community: [
       {
         name: "Python Pará",
