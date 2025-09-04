@@ -87,7 +87,7 @@ export default function PyDataParaPage() {
           {
             name: "Solus IT",
             // logo: siteURL + "logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
-            logo: "/public/logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
+            logo: "logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
             website: "https://www.instagram.com/solus.it",
           },
         ],
