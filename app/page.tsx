@@ -86,7 +86,8 @@ export default function PyDataParaPage() {
         gold: [
           {
             name: "Solus IT",
-            logo: siteURL + "logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
+            // logo: siteURL + "logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
+            logo: "/public/logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
             website: "https://www.instagram.com/solus.it",
           },
         ],
@@ -548,14 +549,14 @@ const schedule = [
                       >
                         <Instagram className="h-4 w-4" />
                       </a>
-                      <a
+                      {/* <a
                         href={keynote.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 rounded-full bg-pydata-gray-dark text-white hover:bg-pydata-dark transition-colors"
                       >
                         <Twitter className="h-4 w-4" />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </CardContent>
