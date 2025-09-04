@@ -45,16 +45,16 @@ export default function PyDataParaPage() {
       status: "upcoming",
       keynotes: [
         {
-          name: "Prof. Claudio Bonel",
+          name: "Dr. Claudio Bonel",
           // title: "Vibe Coding e AI Pair programming",
           // company: "Company",
           talk: "Vibe Coding e AI Pair programming",
           time: "09:05 – 09:45",
-          photo: siteURL  + "claudio-bonel.jpeg?height=200&width=300&text=Prof.+Claudio+Bonel",
+          photo: siteURL  + "claudio-bonel.jpeg?height=200&width=300&text=Dr.+Claudio+Bonel",
           // description: "description",
           linkedin: "https://linkedin.com/in/bonel",
-          instagram: "https://instagram.com/",
-          twitter: "https://twitter.com/",
+          instagram: "https://www.instagram.com/bonelclaudio",
+          // twitter: "https://twitter.com/",
         },
         {
           name: "Closing Keynote Speaker",
@@ -65,8 +65,8 @@ export default function PyDataParaPage() {
           photo: siteURL + "artemisia-weyl.jpeg?height=200&width=300&text=Closing+Keynote+Speaker",
           // description: "description",
           linkedin: "https://linkedin.com/in/arteweyl",
-          instagram: "https://instagram.com/",
-          twitter: "https://twitter.com/",
+          instagram: "https://www.instagram.com/arteweyl",
+          // twitter: "https://twitter.com/",
         },
       ],
       speakers: [
@@ -85,9 +85,9 @@ export default function PyDataParaPage() {
       sponsors: {
         gold: [
           {
-            name: "Gold Sponsor",
-            logo: siteURL + "/placeholder.svg?height=80&width=200&text=Gold+Sponsor+1",
-            website: "https://empresa-gold-1.com",
+            name: "Solus IT",
+            logo: siteURL + "logos/solus-it.jpg?height=60&width=150&text=Solus+IT",
+            website: "https://www.instagram.com/solus.it",
           },
         ],
         silver: [
@@ -183,7 +183,7 @@ const schedule = [
   {
     time: "09:05 – 09:45",
     title: "Vibe Coding e AI Pair programming",
-    speaker: "Prof. Claudio Bonel",
+    speaker: "Dr. Claudio Bonel",
     type: "keynote",
   },
   {
@@ -812,7 +812,7 @@ const schedule = [
           </center> */}
 
           {/* Gold Sponsors */}
-          {/* {currentEvent.sponsors.gold.length > 0 && (
+          {currentEvent.sponsors.gold.length > 0 && (
             <div className="mb-12">
               <h4 className="text-2xl font-semibold text-center text-pydata-orange mb-8">
                 Patrocínio Ouro
@@ -840,14 +840,14 @@ const schedule = [
                 ))}
               </div>
             </div>
-          )} */}
+          )}
 
           {/* Silver Sponsors */}
           {currentEvent.sponsors.silver.length > 0 && (
             <div className="mb-12">
-              {/* <h4 className="text-xl font-semibold text-center text-pydata-gray-dark mb-6">
+              <h4 className="text-xl font-semibold text-center text-pydata-gray-dark mb-6">
                 Patrocínio Prata
-              </h4> */}
+              </h4>
               <div className="flex justify-center gap-6 flex-wrap">
                 {currentEvent.sponsors.silver.map((sponsor, index) => (
                   <a
@@ -1052,6 +1052,7 @@ const schedule = [
                 <Button
                   variant="outline"
                   className="bg-transparent border-white text-white hover:bg-white hover:text-pydata-orange"
+                  onClick={() => openLink('https://www.instagram.com/grupypa')}
                 >
                   Entre em Contato
                 </Button>
