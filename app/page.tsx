@@ -62,12 +62,12 @@ export default function PyDataParaPage() {
           // twitter: "https://twitter.com/",
         },
         {
-          name: "Closing Keynote Speaker",
+          name: "Profa. Artemisia Weyl",
           // title: "Arquitetura base para o sucesso de um projeto de dados",
           // company: "Company",
           talk: "Arquitetura base para o sucesso de um projeto de dados",
           time: "12:00 – 12:40",
-          photo: siteURL + "artemisia-weyl.jpeg?height=200&width=300&text=Closing+Keynote+Speaker",
+          photo: siteURL + "artemisia-weyl.jpeg?height=200&width=300&text=Profa.+Artemisia+Weyl",
           // description: "description",
           linkedin: "https://linkedin.com/in/arteweyl",
           instagram: "https://www.instagram.com/arteweyl",
@@ -493,7 +493,7 @@ const schedule = [
               </CardHeader>
               <CardContent>
                 <p className="text-pydata-gray-dark">
-                  Cada palestra tem duração de 5 minutos e qualquer pessoa pode
+                  Cada palestra tem uma rápida duração e qualquer pessoa pode
                   se inscrever. Tema livre!
                 </p>
               </CardContent>
