@@ -1045,6 +1045,7 @@ const schedule = [
                 <Button
                   variant="outline"
                   className="bg-white text-pydata-orange hover:bg-pydata-light"
+                  onClick={() => openLink('https://github.com/acaicomdados/pydata/raw/main/PyData_PA_MediaKit.pdf')}
                 >
                   Ver Plano de Patrocínio
                 </Button>
