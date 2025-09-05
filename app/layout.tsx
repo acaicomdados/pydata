@@ -4,8 +4,8 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'I Meetup PyData Paráv0 App',
-  description: 'Created with v0',
+  title: 'I Meetup PyData Pará',
+  description: 'Meetup de Belém do Pará',
   generator: 'v0.dev',
 }
 
